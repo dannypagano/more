@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.3"
+  },
+  "scripts": {
+    "css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify",
+    "css:watch": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch=always",
+    "dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch=always & bundle exec jekyll serve"
+  }
+}

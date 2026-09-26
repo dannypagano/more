@@ -1,0 +1,28 @@
+---
+layout: default
+title: Home
+---
+<div class="grid grid-cols-1 h-screen md:grid-cols-2">
+    <div class="h-full grid items-center bg-white bg-[url(/assets/images/MON-6.jpg)] bg-cover md:h-screen ">
+    </div>
+     <div class="h-full grid p-4 bg-white md:h-screen md:p-8">
+        <div>
+            {% include nav.html %}
+        </div>
+        <div class="grid grid-cols-1 h-full content-center">
+            <div class="flex flex-col xl:flex-row">
+                <div class="flex flex-1 mb-8">
+                    <ul>
+                        <li class="mb-2"><a href="#"><p>project one</p></a></li>
+                        <li class="mb-2"><a href="#"><p>project two</p></a></li>
+                        <li class="mb-2"><a href="#"><p>project three</p></a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-1 justify-end">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            {% include footer.html %}
+    </div>
+</div>
