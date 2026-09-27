@@ -3,26 +3,66 @@ layout: default
 title: Home
 ---
 <div class="grid grid-cols-1 h-screen md:grid-cols-2">
-    <div class="h-full grid items-center bg-white bg-[url(/assets/images/MON-6.jpg)] bg-cover md:h-screen ">
+    <div class="relative h-full overflow-hidden bg-white md:h-screen">
+        {% for project in site.data.projects %}
+        <div class="project-slide absolute inset-0 {% unless forloop.first %}opacity-0{% endunless %}"
+             data-project="{{ forloop.index }}">
+            <div class="absolute inset-0 bg-cover bg-center blur-xl scale-110"
+                 style="background-image: url('{{ project.placeholder | relative_url }}')"></div>
+            <img src="{{ project.image | relative_url }}"
+                 alt=""
+                 fetchpriority="{% if forloop.first %}high{% else %}low{% endif %}"
+                 class="absolute inset-0 size-full object-cover opacity-0 transition-opacity duration-300 motion-reduce:transition-none"
+                 onload="this.classList.remove('opacity-0')">
+        </div>
+        {% endfor %}
     </div>
-     <div class="h-full grid p-4 bg-white md:h-screen md:p-8">
+    <div class="h-full grid p-4 bg-white md:h-screen md:p-8">
         <div>
             {% include nav.html %}
         </div>
         <div class="grid grid-cols-1 h-full content-center">
             <div class="flex flex-col xl:flex-row">
                 <div class="flex flex-1 mb-8">
-                    <ul>
-                        <li class="mb-2"><a href="#"><p>project one</p></a></li>
-                        <li class="mb-2"><a href="#"><p>project two</p></a></li>
-                        <li class="mb-2"><a href="#"><p>project three</p></a></li>
+                    <ul id="project-list">
+                        {% for project in site.data.projects %}
+                        <li class="mb-2 text-sm tracking-widest font-mono uppercase hover:before:content-['>_']">
+                            <a href="{{ project.url }}"
+                               data-project="{{ forloop.index }}"
+                               aria-describedby="project-desc-{{ forloop.index }}">
+                                {{ project.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
-                <div class="flex flex-1 justify-end">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div id="project-text" class="grid flex-1">
+                    {% for project in site.data.projects %}
+                    <p id="project-desc-{{ forloop.index }}"
+                       class="col-start-1 row-start-1 {% unless forloop.first %}invisible{% endunless %}"
+                       data-project="{{ forloop.index }}">{{ project.description }}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-            {% include footer.html %}
+        {% include footer.html %}
     </div>
 </div>
+
+<script>
+(() => {
+  const slides = document.querySelectorAll('.project-slide');
+  const descriptions = document.querySelectorAll('#project-text p');
+  const links = document.querySelectorAll('#project-list a[data-project]');
+
+  links.forEach(link => {
+    const show = () => {
+      const id = link.dataset.project;
+      slides.forEach(s => s.classList.toggle('opacity-0', s.dataset.project !== id));
+      descriptions.forEach(p => p.classList.toggle('invisible', p.dataset.project !== id));
+    };
+    link.addEventListener('mouseenter', show);
+    link.addEventListener('focus', show);
+  });
+})();
+</script>

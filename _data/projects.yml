@@ -1,0 +1,24 @@
+- title: Monterrey
+  url: "#"
+  image: /assets/images/MON-6.jpg
+  description: A short description of project one.
+
+- title: Knife
+  url: "#"
+  image: /assets/images/knife.jpg
+  description: A series of 3D printed utility knives, exploring mechanical design, materials, and form.
+
+- title: Wifi
+  url: "#"
+  image: /assets/images/wifi.jpg
+  description: A short description of project two.
+
+- title: Lamps
+  url: "#"
+  image: /assets/images/lamp.jpg
+  description: A short description of project three.
+
+- title: Chair
+  url: "#"
+  image: /assets/images/chair.jpg
+  description: A short description of project three.
