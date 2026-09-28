@@ -1,24 +1,47 @@
-- title: Monterrey
-  url: "#"
+- title: Monterey
+  number: "000"
+  url: "000/monterey"
   image: /assets/images/MON-6.jpg
-  description: A short description of project one.
+  description: Medium-format film photographs made in Monterey, CA on a roadtrip in 2021. I like to use the word "made" for capturing images, it's weightier and more artistic. It's also more pretentious.
 
-- title: Knife
-  url: "#"
+- title: Utility Knife
+  number: "009"
+  url: "009/utility-knife"
   image: /assets/images/knife.jpg
-  description: A series of 3D printed utility knives, exploring mechanical design, materials, and form.
+  description: "Lofty: A series of 3D printed utility knives, exploring mechanical design, materials, and form. Honest: I needed a utility knife and thought it would be quick design and print one. I made a bunch that didn't work, in different shapes, multiple filament colors and materials until I thought it was cool enough."
 
-- title: Wifi
-  url: "#"
+- title: Wifi Sniffer
+  number: "018"
+  url: "018/wifi-sniffer"
   image: /assets/images/wifi.jpg
-  description: A short description of project two.
+  description: Making the best out of a setback. — I tried to get this e-ink display working with the r-node firmware and struggled. Instead I had Claude write a little script to display information I wanted about nearby wifi networks, incorporating my ad-hoc custom UI design.
 
-- title: Lamps
-  url: "#"
+- title: 3D Printed Lamps
+  number: "006"
+  url: "006/lamp"
   image: /assets/images/lamp.jpg
-  description: A short description of project three.
+  description: Playing with color, light and form; 3D printed lamp shades and diffusers.
 
-- title: Chair
-  url: "#"
+- title: Airplane Parts Chair
+  number: "014"
+  url: "014/chair"
   image: /assets/images/chair.jpg
-  description: A short description of project three.
+  description: Trying to make a chair out of salvaged/found airplane parts.
+
+- title: Supercapacitor Racing League
+  number: "000"
+  url: "000/srl"
+  image: /assets/images/srl.png
+  description: Fictional branding explorations inspired by motorsport, livery, and decals.
+
+- title: Office Shelf
+  number: "023"
+  url: "023/office-shelf"
+  image: /assets/images/shelf10.jpg
+  description: "Modifying an IKEA tension shelf for my office with custom-sized plywood shelves, lots of paint stripper, sanding and electrolytic etching. Pictured: 3D printed sanding tools."
+
+- title: Mesh Radio
+  number: "018"
+  url: "018/mesh-radio"
+  image: /assets/images/mesh.jpg
+  description: Playing with mesh radios, LoRA, and decentralized communications platforms like Meshtastic and Reticulum. With a lot of code from Claude, I got the Reticulum firmware running on the Seeed Studio Wio Tracker L1. It was quite a process.

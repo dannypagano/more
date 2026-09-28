@@ -1,0 +1,4 @@
+---
+---
+#contact::before { content: "{{ site.data.contacts.name }}"; }
+#contact::after  { content: "{{ site.data.contacts.domain }}"; }

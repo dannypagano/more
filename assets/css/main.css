@@ -7,7 +7,7 @@
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   --color-muted: var(--color-neutral-500);
   --color-heading: var(--color-neutral-200);
-  --color-link: var(--color-neutral-50);
+  --color-link: var(--color-neutral-700);
 }
 
 @font-face {
@@ -34,4 +34,16 @@ html {
  text-rendering: geometricPrecision;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    color: var(--color-muted);
+}
+
+a {
+    color: var(--color-link);
+}
+
+p #contact:after {
+    content: "howdy@dannypagano.com";
 }
