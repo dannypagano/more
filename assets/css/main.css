@@ -12,7 +12,7 @@
 
 @font-face {
 font-family: "general-grotesque";
-  src: url("../fonts/GeneralGrotesque-Regular.woff2") format("woff2-variations"),
+  src: url("../fonts/GeneralGrotesque-Regular.woff2") format("woff2"),
     url("../fonts/GeneralGrotesque-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -22,7 +22,7 @@ font-family: "general-grotesque";
 
 @font-face {
 font-family: "general-grotesque-mono";
-  src: url("../fonts/GeneralGrotesqueMono-Regular.woff2") format("woff2-variations"),
+  src: url("../fonts/GeneralGrotesqueMono-Regular.woff2") format("woff2"),
     url("../fonts/GeneralGrotesqueMono-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -42,8 +42,4 @@ p {
 
 a {
     color: var(--color-link);
-}
-
-p #contact:after {
-    content: "howdy@dannypagano.com";
 }

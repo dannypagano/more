@@ -3,6 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 node_modules
-yarn.lock
 assets/css/output.css
 vendor
+.DS_Store

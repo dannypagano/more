@@ -28,12 +28,12 @@ title: Projects
                     <ul id="project-list">
                        {% for project in sorted_projects %}
                         <li class="mb-1 text-sm tracking-widest font-mono uppercase">
-                            <p><a href="{{ project.url | relative_url }}"
-                            class="hover:before:content-['>_'] focus-visible:before:content-['>_']"
-                            data-project="{{ forloop.index }}"
-                            aria-describedby="project-desc-{{ forloop.index }}">
-                            [{{ project.number }}] {{ project.title }}
-                            </a>
+                            <p><a {% if project.url %}href="{{ project.url | relative_url }}"{% else %}tabindex="0"{% endif %}
+   class="hover:before:content-['>_'] focus-visible:before:content-['>_']"
+   data-project="{{ forloop.index }}"
+   aria-describedby="project-desc-{{ forloop.index }}">
+    [{{ project.number }}] {{ project.title }}
+</a>
                             </p>
                         </li>
                         {% endfor %}
